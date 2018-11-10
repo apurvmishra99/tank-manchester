@@ -24,7 +24,7 @@ class Mover:
         if self.finished:
             return
         dst = get_distance(self.state.me['X'], self.state.me['Y'], self.x2, self.y2)
-        if dst < 5:
+        if dst < 3:
             self.turner.stop()
             self.finished = True
             self.callback()

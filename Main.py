@@ -56,5 +56,3 @@ while True:
         actions.shooter.stop()
     elif state.me['Ammo'] > 0:
         actions.shooter.shoot(target['X'], target['Y'])
-
-

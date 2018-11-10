@@ -42,7 +42,7 @@ class BotState:
     def update_mobility(self, message_payload):
         name = message_payload['Name']
         if name not in self.game_objects:
-            message_payload['mobility'] = 0  # TODO: Why tho
+            message_payload['mobility'] = 0
             return
 
         old_state = self.game_objects[name]
@@ -50,5 +50,6 @@ class BotState:
                             old_state['Y'])
         if 'mobility' not in message_payload:
             message_payload['mobility'] = dist
-        else:
-            message_payload['mobility'] = np.mean(message_payload['mobility'], dist)
+        # else:
+        #     print("else")
+        #     message_payload['mobility'] = np.mean(message_payload['mobility'], dist)
